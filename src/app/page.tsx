@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "@/app/pages/Hero";
 import NavBar from "@/components/NavBar";
 
 export default function Home() {
@@ -14,5 +14,5 @@ export default function Home() {
         <Hero />
       </section>
     </main>
-  )
+  );
 }
