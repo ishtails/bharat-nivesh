@@ -1,9 +1,18 @@
-import Image from 'next/image'
+import Hero from "@/components/Hero";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <main className="flex h-screen bg-black items-center justify-center">
-      <p className="text-7xl font-bold">Coming Soon.</p>
+    <main className="overflow-x-clip">
+      {/* Navbar */}
+      <NavBar />
+
+      {/* Hero */}
+      <section id="home" className="relative">
+        <div className="absolute blur-[600px] bg-p_orange/40 p-96 -z-10 -left-72 -top-56" />
+        <div className="absolute blur-[600px] bg-p_green-500/40 p-96 -z-10 -right-72 -top-56" />
+        <Hero />
+      </section>
     </main>
   )
 }
