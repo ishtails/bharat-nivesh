@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import underline from "../../assets/underline.svg";
+import underline from "../../../public/assets/underline.svg";
 import Card from "@/components/Card";
-import card1 from "../../assets/card-1.svg";
-import card2 from "../../assets/card-2.svg";
-import card3 from "../../assets/card-3.svg";
-import card4 from "../../assets/card-4.svg";
-import card5 from "../../assets/card-5.svg";
-import card6 from "../../assets/card-6.svg";
+import card1 from "../../../public/assets/card-1.svg";
+import card2 from "../../../public/assets/card-2.svg";
+import card3 from "../../../public/assets/card-3.svg";
+import card4 from "../../../public/assets/card-4.svg";
+import card5 from "../../../public/assets/card-5.svg";
+import card6 from "../../../public/assets/card-6.svg";
 
 const WhatWeDo = () => {
   return (

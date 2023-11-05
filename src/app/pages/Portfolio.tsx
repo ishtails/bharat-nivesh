@@ -3,8 +3,7 @@ import PortfolioCard from "@/components/PortfolioCard";
 import React, { useRef, useState } from "react";
 import Navigate from "@/components/Navigate";
 import Image from "next/image";
-import underline from "../../assets/underline.svg";
-import longterm_port from "../../assets/gallery_longterm.svg";
+import underline from "../../../public/assets/underline.svg";
 import { portfolios } from "../../data/db";
 
 const Portfolio = () => {
