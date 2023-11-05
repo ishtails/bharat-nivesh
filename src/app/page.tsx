@@ -1,6 +1,8 @@
 import Hero from "@/app/pages/Hero";
 import NavBar from "@/components/NavBar";
 import WhatWeDo from "./pages/WhatWeDo";
+import Portfolio from "./pages/Portfolio";
+import Statistics from "@/components/Statistics";
 
 export default function Home() {
   return (
@@ -18,6 +20,16 @@ export default function Home() {
       {/* What We Do? */}
       <section id="whatwedo" className="relative">
         <WhatWeDo />
+      </section>
+
+      {/* Portfolio */}
+      <section id="stats" className="relative">
+        <Statistics />
+      </section>
+
+      {/* Portfolio */}
+      <section id="portfolio" className="relative">
+        <Portfolio />
       </section>
     </main>
   );

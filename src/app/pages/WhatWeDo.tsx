@@ -11,7 +11,7 @@ import card6 from "../../assets/card-6.svg";
 
 const WhatWeDo = () => {
   return (
-    //   {/* What we do? */}
+    //What we do?
     <div className="h-full max-w-6xl mx-10 sm:mx-24 xl:mx-auto">
       <h1 className="text-center text-5xl relative font-semibold">
         What we do?
