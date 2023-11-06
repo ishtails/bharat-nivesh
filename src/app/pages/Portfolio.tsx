@@ -6,8 +6,9 @@ import Image from "next/image";
 import underline from "../../../public/assets/underline.svg";
 import { portfolios } from "../../data/db";
 
-const Portfolio = () => {
-  const [currPortfolio, setCurrPortfolio] = useState("");
+function Portfolio() {
+  const portfoliosRef = useRef<HTMLDivElement>(null);
+  const [currPortfolio, setCurrPortfolio] = useState<number>(0);
 
   return (
     //Portfolios
@@ -23,13 +24,23 @@ const Portfolio = () => {
         <Image src={underline} alt="" className="absolute left-[38%] top-28" />
       </div>
 
-      <div className="flex flex-col items-center justify-content-center">
-        {portfolios.map((portfolio) => (
+      <div
+        ref={portfoliosRef}
+        className="max-w-[95vw] flex overflow-hidden space-x-80 mb-10"
+        style={{
+          width: "100%", 
+          overflowX: "auto",
+          scrollBehavior: "smooth",
+          snapType: "x mandatory",
+          scrollSnapType: "x mandatory",
+        }}
+      >
+        {portfolios.map((portfolio, index) => (
           <div
             key={portfolio.key}
-            className=""
+            className="w-full"
             onMouseEnter={() => {
-              setCurrPortfolio(portfolio.title);
+              setCurrPortfolio(index);
             }}
           >
             <PortfolioCard
@@ -40,8 +51,9 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
+      <Navigate scrollRef={portfoliosRef} scrollBy={400} />
     </div>
   );
-};
+}
 
 export default Portfolio;
