@@ -10,7 +10,7 @@ const Leader = () => {
         src={leader_bg}
         className="absolute"
       />
-      <div className="flex flex-row space-x-20 items-center justify-center relative text-white top-20">
+      <div className="flex flex-row space-x-20 items-center justify-center relative text-white">
         <Image src={leader_image} alt="" />
         <div className="py-32 w-[43%]">
           <p className="text-5xl pb-8">

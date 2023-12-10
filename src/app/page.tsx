@@ -4,6 +4,7 @@ import WhatWeDo from "./pages/WhatWeDo";
 import Portfolio from "./pages/Portfolio";
 import Statistics from "@/components/Statistics";
 import Leader from "./pages/Leader";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -36,6 +37,10 @@ export default function Home() {
       {/* Founder */}
       <section id="leader" className="relative">
         <Leader />
+      </section>
+      {/* Footer */}
+      <section id="footer" className="relative">
+        <Footer />
       </section>
     </main>
   );
