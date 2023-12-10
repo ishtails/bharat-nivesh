@@ -1,7 +1,7 @@
 "use-client";
 import React from "react";
 import MobileMenu from "./MobileMenu";
-import logo2 from "../../public/assets/logo_2.svg";
+import logo2 from "../../public/assets/nav-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 

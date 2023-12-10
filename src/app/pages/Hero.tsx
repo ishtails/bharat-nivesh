@@ -2,10 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div
-      id="hero"
-      className="h-[100vh] max-w-5xl px-4 py-16 mx-10 sm:mt-14 xl:mx-auto"
-    >
+    <div className="h-[77vh] max-w-5xl px-4 pt-16 mx-10 sm:mt-14 xl:mx-auto">
       <div className="text-center">
         <h1 className="text-5xl font-bold font-lexend align-center xl:text-7xl">
           <p>
