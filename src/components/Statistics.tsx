@@ -6,7 +6,7 @@ import stats3 from "../../public/assets/stats_3.svg";
 
 const Statistics = () => {
   return (
-    <div className="bg-p_green-500 flex p-10 justify-between text-white">
+    <div className="bg-p_green-500 flex p-10 justify-between">
       <p className="max-w-[25%] px-8">
         Our boutique investment firm crafts unique portfolios to fit each
         client's needs, risk appetite, time horizon, and goals. With us, your
@@ -14,17 +14,17 @@ const Statistics = () => {
       </p>
       <div className="flex flex-col items-center justify-content-center">
         <Image src={stats1} />
-        <span>250</span>
+        <span className="pt-2 font-bold text-[25px]">250</span>
         <p>No. of Investors</p>
       </div>
       <div className="flex flex-col items-center justify-content-center">
         <Image src={stats2} />
-        <span>Rs. 30Cr+</span>
+        <span className="pt-2 font-bold text-[25px]">Rs. 30Cr+</span>
         <p>Assets Under Management (AUM)</p>
       </div>
       <div className="flex flex-col items-center justify-content-center">
         <Image src={stats3} />
-        <span>10+ Years</span>
+        <span className="pt-2 font-bold text-[25px]">10+ Years</span>
         <p>Total Experience</p>
       </div>
     </div>

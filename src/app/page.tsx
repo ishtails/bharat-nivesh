@@ -3,6 +3,7 @@ import NavBar from "@/components/NavBar";
 import WhatWeDo from "./pages/WhatWeDo";
 import Portfolio from "./pages/Portfolio";
 import Statistics from "@/components/Statistics";
+import Leader from "./pages/Leader";
 
 export default function Home() {
   return (
@@ -30,6 +31,11 @@ export default function Home() {
       {/* Portfolio */}
       <section id="portfolio" className="relative">
         <Portfolio />
+      </section>
+
+      {/* Founder */}
+      <section id="leader" className="relative">
+        <Leader />
       </section>
     </main>
   );
