@@ -17,21 +17,22 @@ function Portfolio() {
         <h1 className="text-center text-5xl font-semibold">
           Get a portfolio that’s invested in you.
         </h1>
-        <p className="text-center text-xl w-[70%]">
+        <p className="text-center text-xl mt-2 w-[50vw]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna.
         </p>
-        <Image src={underline} alt="" className="absolute left-[38%] top-28" />
+        <div className="w-full mt-2 mb-10 flex justify-center">
+          <Image src={underline} alt="underline" className="w-auto h-auto" />
+        </div>
       </div>
 
       <div
         ref={portfoliosRef}
         className="max-w-[95vw] flex overflow-hidden space-x-80 mb-10"
         style={{
-          width: "100%", 
+          width: "100%",
           overflowX: "auto",
           scrollBehavior: "smooth",
-          snapType: "x mandatory",
           scrollSnapType: "x mandatory",
         }}
       >

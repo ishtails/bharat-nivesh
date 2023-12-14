@@ -9,10 +9,10 @@ type Props = {
 
 const Card = ({ title, description, image }: Props) => {
   return (
-    <div className="flex flex-col justify-center pb-2 border-b hover:bg-pale-green/20 transition-all">
-      <Image className="w-80 h-80" src={image} alt="Sunset in the mountains" />
+    <div className="flex flex-col items-center justify-center">
+      <Image className="w-80 h-80" src={image} alt={`${title}`} />
       <div className="text-lg font-bold sm:text-xl">{title}</div>
-      <p className="mt-1 text-body text-2xl font-extralight">{description}</p>
+      <p className="mt-1 text-body text-xl font-extralight text-center">{description}</p>
     </div>
   );
 };

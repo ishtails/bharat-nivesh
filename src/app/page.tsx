@@ -1,22 +1,24 @@
-import Hero from "@/app/pages/Hero";
+import Hero from "@/app/_pages/Hero";
 import NavBar from "@/components/NavBar";
-import WhatWeDo from "./pages/WhatWeDo";
-import Portfolio from "./pages/Portfolio";
+import WhatWeDo from "./_pages/WhatWeDo";
+import Portfolio from "./_pages/Portfolio";
 import Statistics from "@/components/Statistics";
-import Leader from "./pages/Leader";
+import Leader from "./_pages/Leader";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="overflow-x-clip">
-      {/* Navbar */}
-      <NavBar />
+      <section className="xl:h-screen">
+        {/* Navbar */}
+        <NavBar />
 
-      {/* Hero */}
-      <section id="home" className="relative">
-        <div className="absolute blur-[600px] bg-p_orange/40 p-96 -z-10 -left-72 -top-56" />
-        <div className="absolute blur-[600px] bg-p_green-500/40 p-96 -z-10 -right-72 -top-56" />
-        <Hero />
+        {/* Hero */}
+        <section id="home" className="relative ">
+          <div className="absolute blur-[600px] bg-p_orange/40 p-96 -z-10 -left-72 -top-56" />
+          <div className="absolute blur-[600px] bg-p_green-500/40 p-96 -z-10 -right-72 -top-56" />
+          <Hero />
+        </section>
       </section>
 
       {/* What We Do? */}
@@ -25,7 +27,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio */}
-      <section id="stats" className="relative">
+      <section id="stats" className="bg-p_green-500 flex justify-center relative mt-20">
         <Statistics />
       </section>
 

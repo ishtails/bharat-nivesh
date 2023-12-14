@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <div className="z-0 flex text-[0.7rem] lg:text-[1rem] items-center justify-between max-w-6xl py-5 mx-10 xl:mx-auto ">
       <div>
-        <Image src={logo2} />
+        <Image src={logo2} alt="logo"/>
       </div>
 
       <div className="items-center hidden space-x-8 font-medium sm:flex lg:space-x-14 text-black">

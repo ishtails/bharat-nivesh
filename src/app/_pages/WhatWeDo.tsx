@@ -12,11 +12,13 @@ import card6 from "../../../public/assets/card-6.svg";
 const WhatWeDo = () => {
   return (
     //What we do?
-    <div className="h-full max-w-4xl mx-10 sm:mx-24 xl:mx-auto pb-4">
+    <div className="h-full max-w-6xl mx-10 sm:mx-24 xl:mx-auto pb-4">
       <h1 className="text-center text-5xl relative font-semibold">
         What we do?
       </h1>
-      <Image src={underline} alt="" className="absolute left-[38%]" />
+      <div className="w-full mt-2 mb-10 flex justify-center">
+        <Image src={underline} alt="underline" className="w-auto h-auto" />
+      </div>
       <div className="grid grid-cols-1 gap-16 mt-4 sm:grid-cols-1 lg:sm:grid-cols-2">
         <Card
           title="Mutual Funds"
@@ -48,7 +50,7 @@ const WhatWeDo = () => {
           description="There are various types of investments available and you can choose investments"
           image={card6}
         />
-      </div>
+        </div>
     </div>
   );
 };
