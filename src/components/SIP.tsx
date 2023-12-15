@@ -63,7 +63,7 @@ const SIP = (props: Props) => {
                         </div>
                     </div>
 
-                    <div className="mt-8 text-zinc-400 flex flex-col gap-8 w-[50vw] max-w-[500px]">
+                    <div className="mt-8 text-zinc-400 flex flex-col gap-8 w-full md:w-[50vw] max-w-[500px]">
                         <div className="flex flex-col">
                             <span className="flex justify-between pb-2">
                                 <p>Monthly SIP Amount</p>
