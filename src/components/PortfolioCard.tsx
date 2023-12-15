@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 
 type Props = {
-  key: string;
   title: string;
   description: string;
   image: any;
@@ -11,20 +10,17 @@ type Props = {
 
 const PortfolioCard = ({ title, description, image }: Props) => {
   return (
-    <div className="w-[100%]">
-      <div className="bg-p_green-900 snap-center py-10 mt-8 md:px-10 flex flex-col md:flex-row md:justify-between space-x-2 items-center rounded-xl">
-        <div className="md:pl-10 w-[75%] p-5 md:pt-0 text-white">
-          <h3 className="text-5xl font-semibold">{title}</h3>
-          <p className="mt-2 max-w-[75vw] md:max-w-full text-xl text-[#C0BDBD]">
-            {description}
-          </p>
-        </div>
+    <div className="flex bg-p_darkgreen max-w-[720px] md:flex-shrink-0 flex-col-reverse md:flex-row snap-center rounded-2xl items-center">
+      <div className="text-white p-10 md:p-10 md:pr-0">
+        <h1 className="text-3xl font-semibold mt-4">{title}</h1>
+        <p className="text-lg mt-2">{description}</p>
+      </div>
+      <div className="relative w-[50vw] h-[30vh] md:pr-36 md:mb-10">
         <Image
           src={image}
-          width={300}
-          height={300}
-          alt="PortfolioCard Image"
-          className="object-cover aspect-square p-5"
+          alt="portfolio"
+          layout="fill"
+          className="rounded-3xl aspect-square"
         />
       </div>
     </div>

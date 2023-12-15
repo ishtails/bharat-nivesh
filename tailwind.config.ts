@@ -20,9 +20,10 @@ const config: Config = {
         "p_green-700": "#0a753f",
         "p_green-800": "#085c2f",
         "p_green-900": "#064e23",
+        "p_darkgreen": "#053D25",
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };
 export default config;

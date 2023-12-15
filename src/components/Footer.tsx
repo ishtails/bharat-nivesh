@@ -5,7 +5,7 @@ import logo from "../../public/assets/footer-logo.svg";
 const Footer = () => {
   return (
     <div className="bg-[#02190F] p-10 text-[#CECECE]">
-      <div className="px-12 flex flex-row space-x-16 items-center justify-center pb-4">
+      <div className="flex flex-row space-x-16 items-center justify-center pb-4">
         <div className="px-8 max-w-[40%]">
           <span className="font-bold">Address: </span>
           <p>
@@ -18,12 +18,12 @@ const Footer = () => {
           <p>Email: - care@niveshbharat.com</p>
         </div>
         <div className="flex flex-col items-center justify-content-center">
-          <Image src={logo} />
+          <Image src={logo} alt="logo" />
         </div>
       </div>
       <hr className="text-[#FFFFFF]" />
       <div className="text-[#BBBBBB]">
-        <p className="text-[7px] pt-4 px-96 text-center">
+        <p className="text-[7px] mt-2 text-center">
           Nivesh Bharat Finserv Private Limited is an AMFI registered advisor of
           Mutual Funds (ARN-000000) Mutual Fund investments are subject to
           market risks. Please read all scheme related documents carefully

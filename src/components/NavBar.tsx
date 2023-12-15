@@ -12,7 +12,7 @@ const NavBar = () => {
         <Image src={logo2} alt="logo"/>
       </div>
 
-      <div className="items-center hidden space-x-8 font-medium sm:flex lg:space-x-14 text-black">
+      <div className="items-center hidden space-x-8 font-medium md:flex lg:space-x-14 text-black">
         <Link href="about">
           <p className="transition cursor-pointer hover:text-primary">About</p>
         </Link>
@@ -40,7 +40,7 @@ const NavBar = () => {
         </Link>
       </div>
 
-      <div className="relative sm:hidden z-50">
+      <div className="relative md:hidden z-50">
         <MobileMenu />
       </div>
     </div>

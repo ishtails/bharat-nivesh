@@ -19,7 +19,7 @@ const Navigate = ({ scrollRef, scrollBy }: Props) => {
           }
         }}
       >
-        <LiaAngleLeftSolid className="transition-all  hover:text-white" />
+        <LiaAngleLeftSolid className="transition-all  hover:text-p_green-500" />
       </button>
       <button
         aria-label="Next Item"
@@ -30,7 +30,7 @@ const Navigate = ({ scrollRef, scrollBy }: Props) => {
           }
         }}
       >
-        <LiaAngleRightSolid className="transition-all hover:text-white" />
+        <LiaAngleRightSolid className="transition-all hover:text-p_green-500" />
       </button>
     </div>
   );
