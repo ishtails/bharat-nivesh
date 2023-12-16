@@ -9,6 +9,8 @@ import SIP from "@/components/SIP";
 import Image from "next/image";
 import gallery_bg from "../../public/assets/gallery_bg.svg";
 import Growing from "@/components/Growing";
+import Contact from "@/components/Contact";
+import OurTeam from "@/components/OurTeam";
 
 export default function Home() {
   return (
@@ -31,7 +33,10 @@ export default function Home() {
       </section>
 
       {/* Statistics */}
-      <section id="stats" className="bg-p_green-500 flex justify-center relative my-20">
+      <section
+        id="stats"
+        className="bg-p_green-500 flex justify-center relative my-20"
+      >
         <Statistics />
       </section>
 
@@ -62,6 +67,16 @@ export default function Home() {
       {/* Leader */}
       <section id="leader" className="relative mt-5">
         <Leader />
+      </section>
+
+      {/* Our Team */}
+      <section id="ourteam" className="relative">
+        <OurTeam />
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="relative">
+        <Contact />
       </section>
 
       {/* Footer */}
