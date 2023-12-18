@@ -31,6 +31,7 @@ function Portfolio() {
       >
         {portfolios.map((portfolio) => (
           <PortfolioCard
+            key={portfolio.id}
             title={portfolio.title}
             description={portfolio.desc}
             image={portfolio.image}

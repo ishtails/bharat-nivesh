@@ -27,7 +27,7 @@ const Statistics = () => {
 
       <p className="px-8 pb-8 text-center">
         Our boutique investment firm crafts unique portfolios to fit each
-        client's needs, risk appetite, time horizon, and goals. With us, your
+      client&apos;s needs, risk appetite, time horizon, and goals. With us, your
         investment strategy will be as one-of-a-kind as you are.
       </p>
     </div>
