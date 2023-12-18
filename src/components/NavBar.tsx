@@ -34,7 +34,7 @@ const NavBar = () => {
       </div>
       <div>
         <Link href="">
-          <p className="font-medium px-10 py-4 text-white transition rounded-[80px] cursor-pointer bg-p_green-500 hover:bg-p_green-900">
+          <p className="hidden sm:block font-medium px-10 py-4 text-white transition rounded-[80px] cursor-pointer bg-p_green-500 hover:bg-p_green-900">
             Connect with us
           </p>
         </Link>

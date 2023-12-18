@@ -12,8 +12,8 @@ const PortfolioCard = ({ title, description, image }: Props) => {
   return (
     <div className="flex bg-p_darkgreen max-w-[720px] md:flex-shrink-0 flex-col-reverse md:flex-row snap-center rounded-2xl items-center">
       <div className="text-white p-10 md:p-10 md:pr-0">
-        <h1 className="text-3xl font-semibold mt-4">{title}</h1>
-        <p className="text-lg mt-2">{description}</p>
+        <h1 className="text-xl sm:text-3xl font-semibold mt-4">{title}</h1>
+        <p className="text-sm sm:text-lg mt-2">{description}</p>
       </div>
       <div className="relative w-[50vw] h-[30vh] md:pr-36 md:mb-10">
         <Image

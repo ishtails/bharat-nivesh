@@ -12,7 +12,7 @@ const Growing = (props: Props) => {
         <div className="w-full max-w-7xl mb-20 md:mb-0 md:h-[75vh] relative md:grid grid-cols-2 md:gap-20">
             <div className="mx-10 mt-5">
                 <h1 className="text-4xl sm:text-5xl font-semibold">Growing Together</h1>
-                <div className="w-[30vw] mt-4 mb-10">
+                <div className="w-[30vw] mt-4 mb-2">
                     <Image src={underline} alt="underline" className="w-auto h-auto" />
                 </div>
 

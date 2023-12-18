@@ -1,35 +1,72 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 type Props = {};
+
 ChartJS.register(ArcElement, Tooltip, Legend);
-
-export const data = {
-    labels: ['Invested', 'Return'],
-    datasets: [
-        {
-            label: 'Percentage',
-            data: [60, 40],
-            backgroundColor: [
-                '#FF9933',
-                '#0EA362',
-            ],
-            borderColor: [
-                '#FF9933',
-                '#0EA362',
-            ],
-            borderWidth: 1,
-        },
-    ],
-};
-
 
 const SIP = (props: Props) => {
     const [investmentType, setInvestmentType] = useState('SIP');
+    const [monthlySIPAmount, setMonthlySIPAmount] = useState(1000);
+    const [lumpsumAmount, setLumpsumAmount] = useState(1000);
+    const [investmentPeriod, setInvestmentPeriod] = useState(10);
+    const [expectedReturn, setExpectedReturn] = useState(12);
+
+    const calculateInvestedAmount = () => {
+        if (investmentType === 'SIP') {
+            return (monthlySIPAmount * investmentPeriod * 12);
+        } else if (investmentType === 'Lumpsum') {
+            return lumpsumAmount;
+        } else {
+            // Handle unsupported investment type or provide a default value
+            return 0;
+        }
+    };
+
+    const calculateTotalWealth = () => {
+        if (investmentType === 'SIP') {
+            const monthlyRateOfReturn = expectedReturn / (100 * 12);
+            const totalMonths = investmentPeriod * 12;
+            const futureValue = monthlySIPAmount * ((Math.pow(1 + monthlyRateOfReturn, totalMonths) - 1) / monthlyRateOfReturn);
+            return futureValue;
+        } else if (investmentType === 'Lumpsum') {
+            const totalInvestment = lumpsumAmount;
+            const rateOfReturn = expectedReturn / 100;
+            const futureValue = totalInvestment * Math.pow(1 + rateOfReturn, investmentPeriod);
+            return futureValue;
+        } else {
+            // Handle unsupported investment type or provide a default value
+            return 0;
+        }
+    };
+
+    const profit = () => {
+        return (calculateTotalWealth() - calculateInvestedAmount());
+    }
+
+
+    const data = {
+        labels: ['Investment', 'Profit'],
+        datasets: [
+            {
+                label: 'Profit',
+                data: [calculateInvestedAmount().toFixed(0), profit().toFixed(0)],
+                backgroundColor: [
+                    '#FF9933',
+                    '#0EA362',
+                ],
+                borderColor: [
+                    '#FF9933',
+                    '#0EA362',
+                ],
+                borderWidth: 1,
+            },
+        ],
+    }
 
     return (
         <div className="rounded-xl bg-p_darkgreen max-w-5xl text-white m-10">
@@ -64,26 +101,60 @@ const SIP = (props: Props) => {
                     </div>
 
                     <div className="mt-8 text-zinc-400 flex flex-col gap-8 w-full md:w-[50vw] max-w-[500px]">
-                        <div className="flex flex-col">
+
+                        {investmentType === 'SIP' ? (<div className="flex flex-col">
                             <span className="flex justify-between pb-2">
                                 <p>Monthly SIP Amount</p>
-                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">Rs. 5000</p>
+                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">Rs. {monthlySIPAmount}</p>
                             </span>
-                            <Slider />
+                            <Slider
+                                min={1000}
+                                max={500000}
+                                step={1000}
+                                value={monthlySIPAmount}
+                                onChange={(value) => setMonthlySIPAmount(value as number)}
+                            />
+                        </div>) : (<div className="flex flex-col">
+                            <span className="flex justify-between pb-2">
+                                <p>Lumpsum Amount</p>
+                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">Rs. {lumpsumAmount}</p>
+                            </span>
+                            <Slider
+                                min={1000}
+                                max={500000}
+                                step={1000}
+                                value={lumpsumAmount}
+                                onChange={(value) => setLumpsumAmount(value as number)}
+                            />
+                        </div>)}
+
+
+
+                        <div className="flex flex-col">
+                            <span className="flex justify-between pb-2">
+                                <p>Investment Period</p>
+                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg"> {investmentPeriod} Yr</p>
+                            </span>
+                            <Slider
+                                min={1}
+                                max={50}
+                                step={1}
+                                value={investmentPeriod}
+                                onChange={(value) => setInvestmentPeriod(value as number)}
+                            />
                         </div>
                         <div className="flex flex-col">
                             <span className="flex justify-between pb-2">
-                                <p>Monthly SIP Amount</p>
-                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">Rs. 5000</p>
+                                <p>Expected Return (p.a.)</p>
+                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">{expectedReturn}%</p>
                             </span>
-                            <Slider />
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="flex justify-between pb-2">
-                                <p>Monthly SIP Amount</p>
-                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">Rs. 5000</p>
-                            </span>
-                            <Slider />
+                            <Slider
+                                min={0}
+                                max={40}
+                                step={1}
+                                value={expectedReturn}
+                                onChange={(value) => setExpectedReturn(value as number)}
+                            />
                         </div>
                     </div>
                 </div>
@@ -91,14 +162,14 @@ const SIP = (props: Props) => {
                 <div className="flex flex-col mt-8 lg:mt-0 items-center">
                     <Doughnut data={data} />
                     <div className="flex flex-col mt-4 justify-center">
-                        <p>Total Return: <span className="text-lg text-p_orange">Rs. 999999</span></p>
-                        <p>Invested Amount: Rs. 999999</p>
-                        <p>Total Wealth: Rs. 999999</p>
+                        <p>Total Return: <span className="text-lg text-p_orange">Rs. {profit().toFixed(0)}</span></p>
+                        <p>Invested Amount: Rs. {calculateInvestedAmount().toFixed(0)}</p>
+                        <p>Total Wealth: Rs. {calculateTotalWealth().toFixed(0)}</p>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default SIP
+export default SIP;
