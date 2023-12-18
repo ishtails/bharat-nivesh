@@ -43,10 +43,10 @@ const MobileMenu = () => {
       >
         <ul
           ref={menuRef}
-          className="absolute right-0 p-6 shadow-lg rounded-md flex flex-col space-y-4 w-[40vw] bg-[#e1f3ed] border border-[#bbe2d5] max-w-[180px] font-medium"
+          className="absolute right-0 p-6 shadow-lg rounded-md flex flex-col space-y-4 w-[40vw] bg-[#c4f4df] border border-[#defff0] max-w-[180px] font-medium"
         >
           <Link
-            to="objectives"
+            to="whatwedo"
             spy={true}
             smooth={true}
             offset={-50}
@@ -57,7 +57,7 @@ const MobileMenu = () => {
             </p>
           </Link>
           <Link
-            to="services"
+            to="SIP"
             spy={true}
             smooth={true}
             offset={-10}
@@ -68,7 +68,7 @@ const MobileMenu = () => {
             </p>
           </Link>
           <Link
-            to="gallery"
+            to="portfolio"
             spy={true}
             smooth={true}
             offset={-50}
@@ -79,10 +79,10 @@ const MobileMenu = () => {
             </p>
           </Link>
           <Link
-            to="footer"
+            to="contact"
             spy={true}
             smooth={true}
-            offset={-10}
+            offset={-20}
             duration={700}
           >
             <p className="transition cursor-pointer hover:text-primary">

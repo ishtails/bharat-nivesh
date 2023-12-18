@@ -13,10 +13,10 @@ function Portfolio() {
     //Portfolios
     <div className="flex flex-col items-center h-full pb-4 mx-10 mt-24 xl:mx-auto">
       <div className="flex flex-col items-center justify-center mb-10">
-        <h1 className="text-center text-5xl font-semibold">
+        <h1 className="text-center text-3xl sm:text-5xl font-semibold">
           Get a portfolio that’s invested in you.
         </h1>
-        <p className="text-center text-xl mt-2 w-[50vw]">
+        <p className="text-center text-lg sm:text-xl mt-2 w-[70vw] sm:w-[50vw]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna.
         </p>

@@ -42,3 +42,30 @@ export const portfolios = [
     image: "/assets/gallery_longterm.svg",
   },
 ];
+
+export const team = [
+  {
+    id: 1,
+    name: "Vivek Bajaj",
+    designation: "Co-Founder",
+    image: "/assets/team.svg",
+  },
+  {
+    id: 2,
+    name: "Vivek Bajaj",
+    designation: "Co-Founder",
+    image: "/assets/team.svg",
+  },
+  {
+    id: 3,
+    name: "Vivek Bajaj",
+    designation: "Co-Founder",
+    image: "/assets/team.svg",
+  },
+  {
+    id: 4,
+    name: "Vivek Bajaj",
+    designation: "Co-Founder",
+    image: "/assets/team.svg",
+  }
+];

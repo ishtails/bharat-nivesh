@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import leader_image from "../../../public/assets/leader_image.svg";
 import leader_bg from "../../../public/assets/leader_bg.svg";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
 
 
 const Leader = () => {
@@ -29,6 +31,14 @@ const Leader = () => {
             live chat, ticketing and automation that allow us to provide quality.</h1>
           <p>Pulkit Jain</p>
           <p>Founder & CIO</p>
+          <div className="flex gap-2 mt-4">
+            <Link href={"https://www.instagram.com/"} target="_blank">
+              <FaInstagram className="text-2xl" />
+            </Link>
+            <Link href={"https://www.instagram.com/"} target="_blank">
+              <FaLinkedin className="text-2xl" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
