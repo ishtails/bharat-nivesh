@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -15,9 +16,15 @@ const Hero = () => {
           investment strategy.
         </p>
         <button className="items-center py-10">
-          <p className="font-medium px-10 py-5 text-white transition rounded-md cursor-pointer bg-p_green-500 hover:bg-p_green-900">
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={700}
+            className="font-medium px-10 py-5 text-white transition rounded-md cursor-pointer bg-p_green-500 hover:bg-p_green-900">
             Get Started!
-          </p>
+          </Link>
         </button>
       </div>
     </div>

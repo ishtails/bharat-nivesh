@@ -1,3 +1,4 @@
+'use client'
 import Hero from "@/app/_pages/Hero";
 import NavBar from "@/components/NavBar";
 import WhatWeDo from "./_pages/WhatWeDo";
@@ -65,22 +66,23 @@ export default function Home() {
       </section>
 
       {/* Leader */}
-      <section id="leader" className="relative mt-5">
+      <section id="leader" className="relative md:-mt-24 lg:-mt-12 xl:mt-5">
         <Leader />
       </section>
 
       {/* Our Team */}
-      <section id="ourteam" className="relative">
+      <section id="ourteam" className="relative mt-24">
         <OurTeam />
       </section>
 
       {/* Contact */}
-      <section id="contact" className="relative">
+      <section id="contact" className="relative mt-24">
+        <div className="absolute blur-[600px] bg-p_green-500/40 p-96 -z-10 -right-72 -top-56" />
         <Contact />
       </section>
 
       {/* Footer */}
-      <section id="footer" className="relative">
+      <section id="footer" className="relative mt-12 md:mt-24">
         <Footer />
       </section>
     </main>

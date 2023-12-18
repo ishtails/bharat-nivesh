@@ -105,7 +105,7 @@ const SIP = (props: Props) => {
                         {investmentType === 'SIP' ? (<div className="flex flex-col">
                             <span className="flex justify-between pb-2">
                                 <p>Monthly SIP Amount</p>
-                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">Rs. {monthlySIPAmount}</p>
+                                <p className="px-2 py-1 bg-zinc-200 text-black rounded-lg">Rs. {monthlySIPAmount}</p>
                             </span>
                             <Slider
                                 min={1000}
@@ -117,7 +117,7 @@ const SIP = (props: Props) => {
                         </div>) : (<div className="flex flex-col">
                             <span className="flex justify-between pb-2">
                                 <p>Lumpsum Amount</p>
-                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">Rs. {lumpsumAmount}</p>
+                                <p className="px-2 py-1 bg-zinc-200 text-black rounded-lg">Rs. {lumpsumAmount}</p>
                             </span>
                             <Slider
                                 min={1000}
@@ -133,7 +133,7 @@ const SIP = (props: Props) => {
                         <div className="flex flex-col">
                             <span className="flex justify-between pb-2">
                                 <p>Investment Period</p>
-                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg"> {investmentPeriod} Yr</p>
+                                <p className="px-2 py-1 bg-zinc-200 text-black rounded-lg"> {investmentPeriod} Yr</p>
                             </span>
                             <Slider
                                 min={1}
@@ -146,10 +146,10 @@ const SIP = (props: Props) => {
                         <div className="flex flex-col">
                             <span className="flex justify-between pb-2">
                                 <p>Expected Return (p.a.)</p>
-                                <p className="px-2 py-1 bg-zinc-400 text-black rounded-lg">{expectedReturn}%</p>
+                                <p className="px-2 py-1 bg-zinc-200 text-black rounded-lg">{expectedReturn}%</p>
                             </span>
                             <Slider
-                                min={0}
+                                min={1}
                                 max={40}
                                 step={1}
                                 value={expectedReturn}
@@ -162,7 +162,7 @@ const SIP = (props: Props) => {
                 <div className="flex flex-col mt-8 lg:mt-0 items-center">
                     <Doughnut data={data} />
                     <div className="flex flex-col mt-4 justify-center">
-                        <p>Total Return: <span className="text-lg text-p_orange">Rs. {profit().toFixed(0)}</span></p>
+                        <p>Estimated Return: <span className="text-lg text-p_orange">Rs. {profit().toFixed(0)}</span></p>
                         <p>Invested Amount: Rs. {calculateInvestedAmount().toFixed(0)}</p>
                         <p>Total Wealth: Rs. {calculateTotalWealth().toFixed(0)}</p>
                     </div>
