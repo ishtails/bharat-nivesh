@@ -10,8 +10,8 @@ const Statistics = () => {
       <div className="flex flex-col sm:flex-row gap-10 p-10 justify-between">
         <div className="flex flex-col items-center justify-content-center">
           <Image src={stats1} alt="investor" />
-          <span className="pt-2 font-bold text-[25px]">250</span>
-          <p>No. of Investors</p>
+          <span className="pt-2 font-bold text-[25px]">1000+</span>
+          <p>Trusted Clients</p>
         </div>
         <div className="flex flex-col items-center justify-content-center">
           <Image src={stats2} alt="AUM" />

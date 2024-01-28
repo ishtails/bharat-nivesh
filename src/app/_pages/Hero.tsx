@@ -7,13 +7,13 @@ const Hero = () => {
       <div className="text-center">
         <h1 className="text-5xl font-bold font-lexend align-center xl:text-7xl">
           <p>
-            Customized financial plans to match your goals and{" "}
-            <span className="text-p_green-500">risk tolerance.</span>
+            Let’s build your <span className="text-p_green-500">Wealth.</span>
           </p>
         </h1>
         <p className="text-xl text-body py-5">
-          Ready to build your dream portfolio with us? Let’s unveil your perfect
-          investment strategy.
+          We build your Investment Portfolio by customizing your financial
+          planning to match your goals and risk appetite.
+          Introducing India’s First of its kind All-In-One Investment Platform to transform your Investment Journey.
         </p>
         <button className="items-center py-10">
           <Link
@@ -22,8 +22,9 @@ const Hero = () => {
             smooth={true}
             offset={-50}
             duration={700}
-            className="font-medium px-10 py-5 text-white transition rounded-md cursor-pointer bg-p_green-500 hover:bg-p_green-900">
-            Get Started!
+            className="font-medium px-10 py-5 text-white transition rounded-md cursor-pointer bg-p_green-500 hover:bg-p_green-900"
+          >
+            Get Started with us!
           </Link>
         </button>
       </div>
@@ -32,3 +33,4 @@ const Hero = () => {
 };
 
 export default Hero;
+ 

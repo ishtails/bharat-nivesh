@@ -14,6 +14,17 @@ const NavBar = () => {
 
       <div className="items-center hidden space-x-8 font-medium md:flex lg:space-x-14 text-black">
         <Link
+          to="products"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={700}
+        >
+          <p className="transition cursor-pointer hover:text-primary">
+            Products
+          </p>
+        </Link>
+        <Link
           to="whatwedo"
           spy={true}
           smooth={true}
@@ -22,13 +33,7 @@ const NavBar = () => {
         >
           <p className="transition cursor-pointer hover:text-primary">About</p>
         </Link>
-        <Link
-          to="SIP"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={700}
-        >
+        <Link to="SIP" spy={true} smooth={true} offset={-50} duration={700}>
           <p className="transition cursor-pointer hover:text-primary">
             SIP Calculator
           </p>
@@ -44,28 +49,14 @@ const NavBar = () => {
             Portfolio
           </p>
         </Link>
-        <Link
-          to="ourteam"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={700}
-        >
-          <p className="transition cursor-pointer hover:text-primary">
-            Team
-          </p>
+        <Link to="ourteam" spy={true} smooth={true} offset={-50} duration={700}>
+          <p className="transition cursor-pointer hover:text-primary">Team</p>
         </Link>
       </div>
       <div>
-        <Link
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={700}
-        >
+        <Link to="contact" spy={true} smooth={true} offset={-50} duration={700}>
           <p className="hidden md:block font-medium px-10 py-4 text-white transition rounded-[80px] cursor-pointer bg-p_green-500 hover:bg-p_green-900">
-            Connect with us
+            Contact us
           </p>
         </Link>
       </div>
