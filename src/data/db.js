@@ -9,37 +9,37 @@ export const portfolios = [
     id: 2,
     title: "Wealth Builder Portfolio",
     desc: "A personalised mutual funds portfolio, diversified across equity, debt and gold for long-term growth.",
-    image: "/assets/gallery_longterm.svg",
+    image: "/assets/gallery_wealthbuilder.svg",
   },
   {
     id: 3,
     title: "Preserve Wealth Portfolio",
     desc: "A personalised mutual funds portfolio, diversified across equity, debt and gold for long-term growth.",
-    image: "/assets/gallery_longterm.svg",
+    image: "/assets/gallery_preservewealth.svg",
   },
   {
     id: 4,
     title: "New Investor Portfolio",
     desc: "A personalised mutual funds portfolio, diversified across equity, debt and gold for long-term growth.",
-    image: "/assets/gallery_longterm.svg",
+    image: "/assets/gallery_newinvestor.svg",
   },
   {
     id: 5,
     title: "Retirement Portfolio",
     desc: "A personalised mutual funds portfolio, diversified across equity, debt and gold for long-term growth.",
-    image: "/assets/gallery_longterm.svg",
+    image: "/assets/gallery_retirement.svg",
   },
   {
     id: 6,
     title: "Emergency Fund Portfolio",
     desc: "A personalised mutual funds portfolio, diversified across equity, debt and gold for long-term growth.",
-    image: "/assets/gallery_longterm.svg",
+    image: "/assets/gallery_emergency.svg",
   },
   {
     id: 7,
     title: "Short Term Portfolio",
     desc: "A personalised mutual funds portfolio, diversified across equity, debt and gold for long-term growth.",
-    image: "/assets/gallery_longterm.svg",
+    image: "/assets/gallery_shortterm.svg",
   },
 ];
 
