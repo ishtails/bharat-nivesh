@@ -61,12 +61,12 @@ export default function Home() {
       </section>
 
       {/* Growing Together */}
-      <section id="growing" className="relative flex justify-center mt-20">
+      <section id="growing" className="relative flex justify-center m-20">
         <Growing />
       </section>
 
       {/* Leader */}
-      <section id="leader" className="relative md:-mt-24 lg:-mt-12 xl:mt-5">
+      <section id="leader" className="relative z-10 md:-mt-24 lg:-mt-12 xl:mt-5">
         <Leader />
       </section>
 
