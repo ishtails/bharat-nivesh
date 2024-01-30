@@ -24,7 +24,7 @@ const NavBar = () => {
             Products
           </p>
         </Link>
-        <Link to="SIP" spy={true} smooth={true} offset={-50} duration={700}>
+        <Link to="SIP" spy={true} smooth={true} offset={-40} duration={700}>
           <p className="transition cursor-pointer hover:text-primary">
             SIP Calculator
           </p>
@@ -40,7 +40,7 @@ const NavBar = () => {
             Portfolio
           </p>
         </Link>
-        <Link to="ourteam" spy={true} smooth={true} offset={-50} duration={700}>
+        <Link to="ourteam" spy={true} smooth={true} offset={0} duration={700}>
           <p className="transition cursor-pointer hover:text-primary">Team</p>
         </Link>
       </div>

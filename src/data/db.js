@@ -46,18 +46,18 @@ export const portfolios = [
 export const review = [
   {
     id: 1,
-    name: "Abhinav Goswami",
-    designation: "Co-Founder & CEO, Wiser Stack",
-    desc: "High recommended platform for managing your Investment & Finances. The expertise team helps you in building your investment portfolio from scratch with valuable insights. The platform also gives you complete detailing of your portfolio and you can track it on the go hassle free. It is very quick, fast, and secure.",
-    image: "/assets/testimonial.png",
-  },
-  {
-    id: 2,
     name: "Sougandh Radhakrishnan",
     designation: "Product Designer- Atlassian",
     desc: "It’s been a long journey with Nivesh Bharat, my first investment started with these guys since their inception when I had no knowledge about managing my investment and how to build my investment portfolio. Nivesh Bharat helped me in building my portfolio from scratch and supported me even in my financial crisis as they guided me in managing my investments and how to funds the crises, which is impeccable. Building a long term investment Portfolio basis one’s risk appetite and goals is Nivesh Bharat expertise and I trust them with my finances and investment. Cheers To Nivesh Bharat for setting a benchmark.",
     image: "/assets/testimonial.png",
   },
+  {
+    id: 2,
+    name: "Abhinav Goswami",
+    designation: "Co-Founder & CEO, Wiser Stack",
+    desc: "High recommended platform for managing your Investment & Finances. The expertise team helps you in building your investment portfolio from scratch with valuable insights. The platform also gives you complete detailing of your portfolio and you can track it on the go hassle free. It is very quick, fast, and secure.",
+    image: "/assets/testimonial.png",
+  }
 ];
 
 export const team = [
@@ -66,13 +66,15 @@ export const team = [
     name: "Pulkit Jain",
     designation: "Founder",
     image: "/assets/testimonial.png",
+    desc:"An ambitious go-getter, a self-motivated individual. Innovating & solving real life problems is what excites him. With this strong desire and passion for investing, he started managing investment portfolios for friends, relatives, and some clients early in his life. With more than a decade of experience in Investing and Portfolio Management, he has founded Nivesh Bharat.",
     linkedin: "https://www.linkedin.com/in/pulkitjain1",
   },
   {
     id: 2,
-    name: "Vivek Bajaj",
+    name: "Anshika Kochar",
     designation: "Co-Founder",
     image: "/assets/testimonial.png",
+    desc:"An ambitious go-getter, a self-motivated individual. Innovating & solving real life problems is what excites him. With this strong desire and passion for investing, he started managing investment portfolios for friends, relatives, and some clients early in his life. With more than a decade of experience in Investing and Portfolio Management, he has founded Nivesh Bharat.",
     linkedin: "https://www.linkedin.com/in/pulkitjain1",
   },
 ];

@@ -56,7 +56,7 @@ const MobileMenu = () => {
               Products
             </p>
           </Link>
-          <Link to="SIP" spy={true} smooth={true} offset={-10} duration={700}>
+          <Link to="SIP" spy={true} smooth={true} offset={40} duration={700}>
             <p className="transition cursor-pointer hover:text-primary">
               SIP Calculator
             </p>
@@ -65,7 +65,7 @@ const MobileMenu = () => {
             to="portfolio"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={50}
             duration={700}
           >
             <p className="transition cursor-pointer hover:text-primary">
@@ -76,7 +76,7 @@ const MobileMenu = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-20}
+            offset={-50}
             duration={700}
           >
             <p className="transition cursor-pointer hover:text-primary">
