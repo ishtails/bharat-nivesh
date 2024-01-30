@@ -2,10 +2,18 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import underline from "../../public/assets/underline.svg";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { team } from "@/data/db";
 import Navigate from "./Navigate";
 import TeamCard from "./TeamCard";
+
+type member = {
+  id: number;
+  name: string;
+  designation: string;
+  image: any;
+  linkedin?: string;
+  instagram?: string;
+};
 
 const OurTeam = () => {
   const teamRef = useRef<HTMLDivElement>(null);
@@ -17,17 +25,19 @@ const OurTeam = () => {
         <Image src={underline} alt="underline" className="w-[300px]" />
       </div>
 
-      <div className="max-w-[95vw] max-h-[75vh] flex overflow-x-scroll space-x-10 scrollbar-hide bg-pale-green/10 mb-5 scroll-smooth rounded-xl p-5 snap-x snap-mandatory mt-10 sm:p-10" ref={teamRef}>
-        {team.map((member) => (
+      <div className="max-w-[95vw] flex overflow-x-scroll space-x-10 scrollbar-hide bg-pale-green/10 mb-5 scroll-smooth rounded-xl p-5 snap-x snap-mandatory mt-10 sm:p-10" ref={teamRef}>
+        {team.map((member: member) => (
           <TeamCard 
           key={member.id} 
           name={member.name} 
           designation={member.designation} 
-          imageURL={member.image} />
+          imageURL={member.image}
+          linkedin={member.linkedin}
+          instagram={member.instagram} />
         ))}
       </div>
 
-      <Navigate scrollRef={teamRef} scrollBy={200} />
+      <Navigate scrollRef={teamRef} scrollBy={600} />
     </div>
   );
 };

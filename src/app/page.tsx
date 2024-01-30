@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* Growing Together */}
-      <section id="growing" className="relative flex justify-center mt-20">
+      <section id="growing" className="relative flex justify-center m-20">
         <Growing />
       </section>
 

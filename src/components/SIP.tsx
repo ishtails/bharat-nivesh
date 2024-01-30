@@ -114,7 +114,7 @@ const SIP = (props: Props) => {
                 <span className="flex justify-between pb-2">
                   <p>Monthly SIP Amount</p>
                   <p className="px-2 py-1 bg-zinc-200 text-black rounded-lg">
-                    Rs. {monthlySIPAmount}
+                    Rs. {monthlySIPAmount.toLocaleString('en-IN')}
                   </p>
                 </span>
                 <Slider
@@ -130,7 +130,7 @@ const SIP = (props: Props) => {
                 <span className="flex justify-between pb-2">
                   <p>Lumpsum Amount</p>
                   <p className="px-2 py-1 bg-zinc-200 text-black rounded-lg">
-                    Rs. {lumpsumAmount}
+                    Rs. {lumpsumAmount.toLocaleString('en-IN')}
                   </p>
                 </span>
                 <Slider
@@ -178,7 +178,18 @@ const SIP = (props: Props) => {
         </div>
 
         <div className="flex flex-col mt-8 lg:mt-0 items-center">
-          <Doughnut data={data} />
+          <Doughnut
+            data={data}
+            options={{
+              plugins: {
+                legend: {
+                  labels: {
+                    color: 'white'
+                  }
+                }
+              }
+            }}
+          />
           <div className="flex flex-col mt-4 justify-center">
             <p>
               Estimated Return:{" "}

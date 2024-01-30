@@ -1,38 +1,48 @@
-'use client';
-import React, { useState } from 'react';
+// DisclosureFAQ.tsx
+import React from 'react';
 import { Disclosure, Transition } from '@headlessui/react';
 
-const DisclosureComponent = ({ title, children } : {
+type DisclosureComponentProps = {
     title: string;
     children: React.ReactNode;
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
+    isOpen: boolean;
+    onToggle: () => void;
+};
 
-  return (
-    <Disclosure>
-      {({ open }) => (
-        <>
-          <Disclosure.Button className="flex text-left font-medium text-xl py-2">
-            <span>{title}</span>
-          </Disclosure.Button>
+const DisclosureComponent = ({ title, children, isOpen, onToggle }: DisclosureComponentProps) => {
+    return (
+        <Disclosure>
+            {({ open, close }) => (
+                <>
+                    <Disclosure.Button
+                        className={`flex text-left font-medium text-xl py-2 ${open ? 'open' : ''}`}
+                        onClick={() => {
+                            onToggle();
+                            close(); // Close other disclosures when this one is opened
+                        }}
+                    >
+                        <span>{title}</span>
+                    </Disclosure.Button>
 
-          <Transition
-            show={open}
-            enter="transition-opacity duration-200"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <Disclosure.Panel className="text-sm text-slate-600 px-4 pb-4">
-              {children}
-            </Disclosure.Panel>
-          </Transition>
-        </>
-      )}
-    </Disclosure>
-  );
+                    <Transition
+                        show={isOpen}
+                        enter="transition-opacity duration-300 ease-in-out"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="transition-opacity duration-3000 ease-in-out"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        {open && (
+                            <Disclosure.Panel className="text-sm text-slate-600 px-4 pb-4">
+                                {children}
+                            </Disclosure.Panel>
+                        )}
+                    </Transition>
+                </>
+            )}
+        </Disclosure>
+    );
 };
 
 export default DisclosureComponent;
