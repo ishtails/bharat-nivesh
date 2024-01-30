@@ -43,7 +43,7 @@ const MobileMenu = () => {
       >
         <ul
           ref={menuRef}
-          className="absolute right-0 p-6 shadow-lg rounded-md flex flex-col space-y-4 w-[40vw] bg-[#c4f4df] border border-[#defff0] max-w-[180px] font-medium"
+          className="absolute right-0 p-6 shadow-lg rounded-md flex flex-col space-y-4 w-[40vw] bg-p_green-100 border border-[#defff0] max-w-[180px] font-medium"
         >
           <Link
             to="whatwedo"
@@ -53,16 +53,15 @@ const MobileMenu = () => {
             duration={700}
           >
             <p className="transition cursor-pointer hover:text-primary">
+              Products
+            </p>
+          </Link>
+          <Link to="stats" spy={true} smooth={true} offset={-50} duration={700}>
+            <p className="transition cursor-pointer hover:text-primary">
               About
             </p>
           </Link>
-          <Link
-            to="SIP"
-            spy={true}
-            smooth={true}
-            offset={-10}
-            duration={700}
-          >
+          <Link to="SIP" spy={true} smooth={true} offset={-10} duration={700}>
             <p className="transition cursor-pointer hover:text-primary">
               SIP Calculator
             </p>
