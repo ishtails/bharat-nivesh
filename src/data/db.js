@@ -65,14 +65,14 @@ export const team = [
     id: 1,
     name: "Pulkit Jain",
     designation: "Founder",
-    image: "/assets/team.svg",
+    image: "/assets/testimonial.png",
     linkedin: "https://www.linkedin.com/in/pulkitjain1",
   },
   {
     id: 2,
     name: "Vivek Bajaj",
     designation: "Co-Founder",
-    image: "/assets/team.svg",
+    image: "/assets/testimonial.png",
     linkedin: "https://www.linkedin.com/in/pulkitjain1",
   },
 ];

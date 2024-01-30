@@ -17,13 +17,13 @@ const Growing = (props: Props) => {
     return (
         <div className="w-full max-w-7xl mb-20 md:mb-0 md:h-[600px] lg:h-[650px] relative md:grid grid-cols-2 md:gap-20">
             <div className="mx-10 mt-5">
-                <h1 className="text-4xl sm:text-5xl font-semibold">Growing Together</h1>
+                <h1 className="text-5xl sm:text-4xl lg:text-6xl font-semibold">Growing Together</h1>
                 <div className="w-[30vw] mt-4 mb-2">
                     <Image src={underline} alt="underline" className="w-auto h-auto" />
                 </div>
 
                 <DisclosureComponent
-                    title="Register and create your first support portal"
+                    title="Register and create your account instantly."
                     isOpen={activeDisclosure === 0}
                     onToggle={() => handleDisclosureToggle(0)}
                 >
@@ -31,7 +31,7 @@ const Growing = (props: Props) => {
                 </DisclosureComponent>
 
                 <DisclosureComponent
-                    title="Manage your dashbaord easily"
+                    title="View and manage your dashboard easily on the go."
                     isOpen={activeDisclosure === 1}
                     onToggle={() => handleDisclosureToggle(1)}
                 >
@@ -39,7 +39,7 @@ const Growing = (props: Props) => {
                 </DisclosureComponent>
 
                 <DisclosureComponent
-                    title="Start Investing"
+                    title="Start Investing Now"
                     isOpen={activeDisclosure === 2}
                     onToggle={() => handleDisclosureToggle(2)}
                 >

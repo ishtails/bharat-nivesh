@@ -71,7 +71,7 @@ const SIP = (props: Props) => {
   };
 
   return (
-    <div className="rounded-xl bg-p_darkgreen max-w-5xl text-white m-10">
+    <div className="rounded-xl bg-p_darkgreen max-w-6xl text-white m-10">
       <h1 className="font-semibold text-2xl text-center pt-8 mb-10">
         SIP Calculator
       </h1>
