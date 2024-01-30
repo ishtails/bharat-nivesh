@@ -17,16 +17,17 @@ const Growing = (props: Props) => {
                 </div>
 
                 <DisclosureComponent title="Register and create your first support portal">
-                    <p>It only takes 5 minutes. Set-up is smooth & simple, with fully customisable page design to reflect your brand lorem dummy.</p>
+                    <p>Register and create your account instantly.</p>
                 </DisclosureComponent>
 
-                <DisclosureComponent title="Manage your dashbaord easily">
-                    <p>It only takes 5 minutes. Set-up is smooth & simple, with fully customisable page design to reflect your brand lorem dummy.</p>
+                <DisclosureComponent title="View and manage your dashboard easily on the go.">
+                    <p>View or manage your dashbaord easily</p>
                 </DisclosureComponent>
 
-                <DisclosureComponent title="Start Investing">
+                <DisclosureComponent title="Start Investing Now">
                     <p>It only takes 5 minutes. Set-up is smooth & simple, with fully customisable page design to reflect your brand lorem dummy.</p>
                 </DisclosureComponent>
+                
             </div>
 
             <div className="relative hidden md:block">

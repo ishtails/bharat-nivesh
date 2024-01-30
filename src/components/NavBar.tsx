@@ -14,7 +14,7 @@ const NavBar = () => {
 
       <div className="items-center hidden space-x-8 font-medium md:flex lg:space-x-14 text-black">
         <Link
-          to="products"
+          to="whatwedo"
           spy={true}
           smooth={true}
           offset={-50}
@@ -25,7 +25,7 @@ const NavBar = () => {
           </p>
         </Link>
         <Link
-          to="whatwedo"
+          to="stats"
           spy={true}
           smooth={true}
           offset={-50}

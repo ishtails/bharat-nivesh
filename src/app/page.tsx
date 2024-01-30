@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import Hero from "@/app/_pages/Hero";
 import NavBar from "@/components/NavBar";
 import WhatWeDo from "./_pages/WhatWeDo";
 import Portfolio from "./_pages/Portfolio";
 import Statistics from "@/components/Statistics";
-import Leader from "./_pages/Leader";
+import Review from "./_pages/Review";
 import Footer from "@/components/Footer";
 import SIP from "@/components/SIP";
 import Image from "next/image";
@@ -65,9 +65,9 @@ export default function Home() {
         <Growing />
       </section>
 
-      {/* Leader */}
-      <section id="leader" className="relative md:-mt-24 lg:-mt-12 xl:mt-5">
-        <Leader />
+      {/* Reviews */}
+      <section id="review" className="relative md:-mt-24 lg:-mt-12 xl:mt-5">
+        <Review />
       </section>
 
       {/* Our Team */}

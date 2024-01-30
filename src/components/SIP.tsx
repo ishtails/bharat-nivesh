@@ -9,6 +9,11 @@ type Props = {};
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+function formatIndianNumber(s: string) {
+  let x = parseFloat(s);
+  return x.toLocaleString("en-IN");
+}
+
 const SIP = (props: Props) => {
   const [investmentType, setInvestmentType] = useState("SIP");
   const [monthlySIPAmount, setMonthlySIPAmount] = useState(1000);
@@ -178,12 +183,17 @@ const SIP = (props: Props) => {
             <p>
               Estimated Return:{" "}
               <span className="text-lg text-p_orange">
-                Rs. {profit().toFixed(0)}
+                Rs. {formatIndianNumber(profit().toFixed(0))}
               </span>
-              ,
             </p>
-            <p>Invested Amount: Rs. {calculateInvestedAmount().toFixed(0)}, </p>
-            <p>Total Wealth: Rs. {calculateTotalWealth().toFixed(0)}</p>
+            <p>
+              Invested Amount: Rs.{" "}
+              {formatIndianNumber(calculateInvestedAmount().toFixed(0))}{" "}
+            </p>
+            <p>
+              Total Wealth: Rs.{" "}
+              {formatIndianNumber(calculateTotalWealth().toFixed(0))}
+            </p>
           </div>
         </div>
       </div>
