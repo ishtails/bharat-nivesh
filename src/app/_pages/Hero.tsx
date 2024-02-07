@@ -23,7 +23,7 @@ const Hero = () => {
           First of its kind All-In-One Investment Platform to transform your
           Investment Journey.
         </p>
-        <button className="items-center py-10">
+        <button className="items-center mt-5 py-10">
           <Link
             to="contact"
             spy={true}

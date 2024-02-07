@@ -3,15 +3,22 @@ import React from "react";
 import Image from "next/image";
 import underline from "../../public/assets/underline.svg";
 import contact from "../../public/assets/contact.svg";
+import axios from "axios";
 
 const Contact = () => {
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
-    console.log(data);
+
+    try {
+      await axios.post("/api/contact", data);
+      alert("Submitted successfully");
+    } catch (error) {
+      alert("Message failed to send");
+    }
   }
 
   return (
