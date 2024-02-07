@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import stats1 from "../../public/assets/stats_1.svg";
-import stats2 from "../../public/assets/stats_2.svg";
-import stats3 from "../../public/assets/stats_3.svg";
+import stats1 from "../../public/assets/about_clients.svg";
+import stats2 from "../../public/assets/about_AUM.svg";
+import stats3 from "../../public/assets/about_expert.svg";
 import underline from "../../public/assets/underline.svg";
+import { AboutCard } from "./AboutCard";
 
 const Statistics = () => {
   return (
@@ -13,21 +14,9 @@ const Statistics = () => {
         <Image src={underline} alt="underline" className="w-auto h-auto" />
       </div>
       <div className="flex flex-col sm:flex-row gap-10 p-10 justify-between">
-        <div className="flex flex-col bg-p_green-300 items-center justify-center p-10 rounded-xl">
-          <Image src={stats3} alt="investor" />
-          <span className="pt-2 font-bold text-[25px]">1000+</span>
-          <p className="">Trusted Clients</p>
-        </div>
-        <div className="flex flex-col bg-p_green-300 items-center justify-center p-10 rounded-xl">
-          <Image src={stats1} alt="AUM" />
-          <span className="pt-2 font-bold text-[25px]">Rs. 30Cr+</span>
-          <p>Assets Under Management (AUM)</p>
-        </div>
-        <div className="flex flex-col bg-p_green-300 items-center justify-center p-10 rounded-xl">
-          <Image src={stats2} alt="Experience" />
-          <span className="pt-2 font-bold text-[25px]">10+ Years</span>
-          <p>Total Experience</p>
-        </div>
+        <AboutCard image={stats1} title="1000+" body="Trusted Clients" />
+        <AboutCard image={stats2} title="Rs. 30Cr+" body="Assets Under Management (AUM)" />
+        <AboutCard image={stats3} title="10+ Years" body="Total Experience" />
       </div>
 
       <p className="px-8 pb-8 font-semibold text-center">
