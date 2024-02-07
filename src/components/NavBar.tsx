@@ -13,6 +13,11 @@ const NavBar = () => {
       </div>
 
       <div className="items-center hidden space-x-8 font-medium md:flex lg:space-x-14 text-black">
+        <Link to="stats" spy={true} smooth={true} offset={-50} duration={700}>
+          <p className="transition cursor-pointer hover:text-primary hover:cursor-pointer hover:scale-105 duration-300 hover:text-[#ff9933]">
+            About Us
+          </p>
+        </Link>
         <Link
           to="whatwedo"
           spy={true}
@@ -20,12 +25,12 @@ const NavBar = () => {
           offset={-50}
           duration={700}
         >
-          <p className="transition cursor-pointer hover:text-primary">
+          <p className="transition cursor-pointer hover:text-primary hover:cursor-pointer hover:scale-105 duration-300 hover:text-[#ff9933]">
             Products
           </p>
         </Link>
         <Link to="SIP" spy={true} smooth={true} offset={-40} duration={700}>
-          <p className="transition cursor-pointer hover:text-primary">
+          <p className="transition cursor-pointer hover:text-primary hover:cursor-pointer hover:scale-105 duration-300 hover:text-[#ff9933]">
             SIP Calculator
           </p>
         </Link>
@@ -36,12 +41,14 @@ const NavBar = () => {
           offset={-50}
           duration={700}
         >
-          <p className="transition cursor-pointer hover:text-primary">
+          <p className="transition cursor-pointer hover:text-primary hover:cursor-pointer hover:scale-105 duration-300 hover:text-[#ff9933]">
             Portfolio
           </p>
         </Link>
         <Link to="ourteam" spy={true} smooth={true} offset={0} duration={700}>
-          <p className="transition cursor-pointer hover:text-primary">Team</p>
+          <p className="transition cursor-pointer hover:text-primary hover:cursor-pointer hover:scale-105 duration-300 hover:text-[#ff9933]">
+            Our Team
+          </p>
         </Link>
       </div>
       <div>

@@ -46,6 +46,17 @@ const MobileMenu = () => {
           className="absolute right-0 p-6 shadow-lg rounded-md flex flex-col space-y-4 w-[40vw] bg-p_green-100 border border-[#defff0] max-w-[180px] font-medium"
         >
           <Link
+            to="stats"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={700}
+          >
+            <p className="transition cursor-pointer hover:text-primary">
+              About Us
+            </p>
+          </Link>
+          <Link
             to="whatwedo"
             spy={true}
             smooth={true}

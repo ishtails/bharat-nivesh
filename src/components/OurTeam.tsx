@@ -10,6 +10,7 @@ type member = {
   id: number;
   name: string;
   designation: string;
+  education: string;
   image: any;
   linkedin?: string;
   instagram?: string;
@@ -26,16 +27,21 @@ const OurTeam = () => {
         <Image src={underline} alt="underline" className="w-[300px]" />
       </div>
 
-      <div className="max-w-[95vw] flex overflow-x-scroll space-x-10 scrollbar-hide bg-pale-green/10 scroll-smooth rounded-xl p-5 snap-x snap-mandatory sm:p-10" ref={teamRef}>
+      <div
+        className="max-w-[95vw] flex overflow-x-scroll space-x-10 scrollbar-hide bg-pale-green/10 scroll-smooth rounded-xl p-5 snap-x snap-mandatory sm:p-10"
+        ref={teamRef}
+      >
         {team.map((member: member) => (
-          <TeamCard 
-          key={member.id} 
-          name={member.name} 
-          designation={member.designation}
-          desc = {member.desc}
-          imageURL={member.image}
-          linkedin={member.linkedin}
-          instagram={member.instagram} />
+          <TeamCard
+            key={member.id}
+            name={member.name}
+            designation={member.designation}
+            education={member.education}
+            desc={member.desc}
+            imageURL={member.image}
+            linkedin={member.linkedin}
+            instagram={member.instagram}
+          />
         ))}
       </div>
 

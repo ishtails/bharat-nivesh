@@ -36,7 +36,7 @@ export default function Home() {
       {/* Statistics */}
       <section
         id="stats"
-        className="bg-p_green-500 flex justify-center relative my-20"
+        className="flex justify-center relative my-20"
       >
         <Statistics />
       </section>

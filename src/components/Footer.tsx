@@ -11,11 +11,12 @@ const Footer = () => {
         </div>
         <div className="text-center sm:w-[40%] mt-4">
           <span className="font-bold">Address: </span>
-          <p className="">
-            Mission Billion Finserv Private Limited 1st Floor, Plot. No. 21,
-            Sindhi Colony, Above City Decor, Opposite Gumanpura Flyover, Kota,
-            Rajasthan-324006 Nearest Landmark: - Near DP Jewellers, Kota
+          <p className="">Mission Billion Finserv Private Limited 1st Floor</p>
+          <p>
+            Plot. No. 21, Sindhi Colony, Above City Decor, Opposite Gumanpura
+            Flyover, Kota, Rajasthan-324006
           </p>
+          <p> Nearest Landmark: - Near DP Jewellers, Kota</p>
         </div>
         <div className="flex flex-col gap-2 mt-4 text-center">
           <div>
