@@ -24,12 +24,6 @@ const Navigate = ({ scrollRef, scrollBy }: Props) => {
     if (navigateRef.current) {
       observer.observe(navigateRef.current);
     }
-
-    return () => {
-      if (navigateRef.current) {
-        observer.unobserve(navigateRef.current);
-      }
-    };
   }, []);
 
   useEffect(() => {
@@ -42,7 +36,7 @@ const Navigate = ({ scrollRef, scrollBy }: Props) => {
     return () => {
       clearInterval(interval);
     };
-  }, [autoScroll]);
+  }, [autoScroll, scrollRef]);
 
   return (
     <div ref={navigateRef} className="self-center space-x-10 flex">

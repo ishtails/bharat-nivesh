@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import mobile from "../../public/assets/mobile.svg";
 import graph from "../../public/assets/graph.svg";

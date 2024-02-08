@@ -12,7 +12,7 @@ const NavBar = () => {
         <Image src={logo2} alt="logo" />
       </div>
 
-      <div className="items-center hidden space-x-8 font-medium md:flex lg:space-x-14 text-black">
+      <div className="items-center hidden space-x-8 font-medium md:flex md:space-x-6 lg:space-x-14 text-black">
         <Link to="stats" spy={true} smooth={true} offset={-50} duration={700}>
           <p className="transition cursor-pointer hover:text-primary hover:cursor-pointer hover:scale-105 duration-300 hover:text-[#ff9933]">
             About Us

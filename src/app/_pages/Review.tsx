@@ -1,9 +1,6 @@
+'use client'
 import React, { useRef } from "react";
 import Image from "next/image";
-import leader_image from "../../../public/assets/leader_image.svg";
-import leader_bg from "../../../public/assets/leader_bg.svg";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import Link from "next/link";
 import underline from "../../../public/assets/underline.svg";
 import { review } from "@/data/db";
 import Navigate from "../../components/Navigate";

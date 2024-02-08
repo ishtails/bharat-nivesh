@@ -1,6 +1,7 @@
 'use client'
 import axios from "axios"
-import React from 'react'
+import { useState } from "react"
+
 
 type Props = {}
 
@@ -10,8 +11,8 @@ type Item = {
     message: string
 }
 
-const page = (props: Props) => {
-    const [data, setData] = React.useState([])
+const AdminPage = (props: Props) => {
+    const [data, setData] = useState([])
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -48,4 +49,4 @@ const page = (props: Props) => {
     )
 }
 
-export default page
+export default AdminPage
