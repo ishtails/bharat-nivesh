@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
 
 type Props = {
@@ -8,12 +8,49 @@ type Props = {
 };
 
 const Navigate = ({ scrollRef, scrollBy }: Props) => {
+  const [autoScroll, setAutoScroll] = useState(false);
+  const navigateRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setAutoScroll(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (navigateRef.current) {
+      observer.observe(navigateRef.current);
+    }
+
+    return () => {
+      if (navigateRef.current) {
+        observer.unobserve(navigateRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollRef.current && autoScroll) {
+        scrollRef.current.scrollLeft += 400;
+      }
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [autoScroll]);
+
   return (
-    <div className="self-center space-x-10 flex">
+    <div ref={navigateRef} className="self-center space-x-10 flex">
       <button
         aria-label="Previous Item"
         className="bg-white p-2 shadow-md rounded-full hover:bg-primary transition-all"
         onClick={() => {
+          setAutoScroll(false);
           if (scrollRef.current) {
             scrollRef.current.scrollLeft -= scrollBy;
           }
@@ -25,6 +62,7 @@ const Navigate = ({ scrollRef, scrollBy }: Props) => {
         aria-label="Next Item"
         className="bg-white p-2 shadow-md rounded-full hover:bg-primary transition-all"
         onClick={() => {
+          setAutoScroll(false);
           if (scrollRef.current) {
             scrollRef.current.scrollLeft += scrollBy;
           }

@@ -36,6 +36,7 @@ const TeamCard = ({
         <p className="mb-5 text-justify text-[13px]">{desc}</p>
         <h3 className="text-lg font-bold sm:text-xl">{name}</h3>
         <p className="text-body ">{designation}</p>
+        <p className="text-body ">{education}</p>
         <div className="flex justify-center space-x-4">
           {instagram && (
             <Link

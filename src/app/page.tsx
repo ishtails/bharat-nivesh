@@ -53,8 +53,8 @@ export default function Home() {
           <Image
             src={gallery_bg}
             alt="Background Image"
-            layout="fill"
-            objectFit="cover"
+            fill={true}
+            className="object-cover"
           />
         </div>
         <Portfolio />

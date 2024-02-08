@@ -13,11 +13,22 @@ const Contact = () => {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
+    if (!data.name || !data.email || !data.message) return alert("Please fill in all fields");
+
+    const email = String(data.email);
+    if (!email.includes("@") || !email.includes(".")) return alert("Invalid email");
+
+    const name = String(data.name);
+    if (name.length < 3) return alert("Name must be at least 3 characters long");
+
+    const message = String(data.message);
+    if (message.length < 20) return alert("Message must be at least 10 characters long");
+
     try {
       await axios.post("/api/contact", data);
       alert("Submitted successfully");
-    } catch (error) {
-      alert("Message failed to send");
+    } catch (error: any) {
+      alert(error.response.data || "Failed to submit");
     }
   }
 

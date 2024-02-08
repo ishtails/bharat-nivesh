@@ -1,6 +1,6 @@
 "use client";
 import PortfolioCard from "@/components/PortfolioCard";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import Navigate from "@/components/Navigate";
 import Image from "next/image";
 import underline from "../../../public/assets/underline.svg";
@@ -8,18 +8,6 @@ import { portfolios } from "../../data/db";
 
 function Portfolio() {
   const portfoliosRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (portfoliosRef.current) {
-        portfoliosRef.current.scrollLeft += 400; // Adjust the scroll speed as needed
-      }
-    }, 2000); // Adjust the interval duration as needed
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
 
   return (
     //Portfolios

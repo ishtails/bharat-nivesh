@@ -6,16 +6,19 @@ const Hero = () => {
   return (
     <div className="mb-20 xl:-mb-20 max-w-5xl px-4 pt-16 mx-10 sm:mt-14 xl:mx-auto">
       <div className="text-center">
-        <h1 className="text-5xl font-bold font-lexend align-center text-center xl:text-7xl">
+        <h1 className="hidden md:block text-5xl font-bold font-lexend align-center text-center xl:text-7xl">
           <ReactTyped
             strings={["Let's build your Wealth!"]}
             typeSpeed={40}
             backSpeed={50}
-            backDelay={1000}
+            backDelay={1500}
             loop
           >
-            <input type="text" className="bg-transparent text-center" />
+            <input type="text" className="bg-transparent outline-none text-center" />
           </ReactTyped>
+        </h1>
+        <h1 className="md:hidden text-5xl font-bold font-lexend text-center">
+          <p className="">Let's build your <span className="text-p_green-500">Wealth!</span></p>
         </h1>
         <p className="text-xl text-body py-5">
           We build your Investment Portfolio by customizing your financial

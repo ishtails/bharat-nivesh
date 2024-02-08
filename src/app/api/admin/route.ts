@@ -3,20 +3,17 @@ import { connectToDB } from "@/lib/helpers";
 
 export async function POST(request: Request) {
   try {
-    await connectToDB();
     const { secret } = await request.json();
-    console.log(secret);
+    await connectToDB();
 
-    if (secret !== "123") {
+    if (secret !== "nivesh@100") {
       return new Response("Unauthorized", { status: 401 });
     }
 
     const allContacts = await contacts.find();
 
-    return new Response(JSON.stringify(allContacts), {
-      headers: { "content-type": "application/json" },
-    });
+    return new Response(JSON.stringify(allContacts));
   } catch (error) {
-    return new Response("Failed", { status: 500 });
+    return new Response("Server Error", { status: 500 });
   }
 }

@@ -19,7 +19,7 @@ const ReviewCard = ({
   instagram,
 }: Props) => {
   return (
-    <div className="shadow-lg bg-p_green-100 py-10 md:px-10 flex flex-col md:flex-row md:justify-between md:divide-x-2 space-x-2 items-center max-w-[670px] flex-shrink-0 snap-center rounded-xl divide-y-2 divide-neutral-200 md:divide-y-0">
+    <div className="shadow-lg bg-p_green-100 py-10 md:px-10 flex flex-col md:flex-row md:justify-between md:divide-x-2 space-x-2 items-center max-w-[640px] flex-shrink-0 snap-center rounded-xl divide-y-2 divide-neutral-200 md:divide-y-0">
       <div className="relative pb-5 md:pb-0 md:pr-5">
         <Image
           width={200}
