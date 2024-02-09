@@ -13,6 +13,7 @@ type Item = {
 
 const AdminPage = (props: Props) => {
     const [data, setData] = useState([])
+    const [isActive, setIsActive] = useState(true)
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ const AdminPage = (props: Props) => {
 
         try {
             const res = await axios.post("/api/admin", data);
+            setIsActive(false);
             setData(res.data);
         } catch (error) {
             alert("Error");
@@ -30,13 +32,14 @@ const AdminPage = (props: Props) => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="bg-zinc-900 flex items-center justify-center h-screen">
+            <form onSubmit={handleSubmit} className={`text-white flex flex-col gap-4 bg-zinc-800 px-10 py-6 rounded-xl items-center ${isActive ? "" : "hidden"}`}>
+                <p>Enter Password</p>
                 <input id="secret" name="secret" type="text" className="rounded-sm h-auto text-black border-[#8D8D8D] border-[0.5px] text-[13px] p-2" />
-                <button type="submit">Submit</button>
+                <button className="border rounded-md px-2 py-1" type="submit">Submit</button>
             </form>
 
-            <div className="mt-10">
+            <div className={`${isActive ? "hidden" : ""} text-white`}>
                 {data.map((item: Item, index) => (
                     <div key={index}>
                         <p>{item.name}</p>

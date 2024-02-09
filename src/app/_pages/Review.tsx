@@ -19,7 +19,7 @@ const Review = () => {
       </div>
 
       <div
-        className="m-10 max-w-[95vw] flex overflow-x-scroll space-x-10 scrollbar-hide bg-pale-green/10 scroll-smooth rounded-xl snap-x snap-mandatory sm:p-10"
+        className="max-w-[95vw] flex overflow-x-scroll space-x-10 scrollbar-hide mb-10 scroll-smooth px-24 snap-x mt-12 snap-mandatory"
         ref={reviewRef}
       >
         {review.map((member) => (
