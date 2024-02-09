@@ -17,9 +17,10 @@ const contactSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true }
+  { 
+    timestamps: true,
+    expires: "3m"
+  }
 );
-
-
 
 export default mongoose.models.contact || mongoose.model("contact", contactSchema);
