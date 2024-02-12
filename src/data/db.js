@@ -3,7 +3,7 @@ export const portfolios = [
     id: 1,
     title: "Tax Saver Fund",
     desc: "A personalised tax saver portfolio that helps you grow your wealth while savings the taxes by investing in equity funds.",
-    image: "/assets/gallery_longterm.svg",
+    image: "/assets/gallery_taxsaver.svg",
   },
   {
     id: 2,
@@ -15,13 +15,13 @@ export const portfolios = [
     id: 3,
     title: "Preserve Wealth Portfolio",
     desc: "A personalised mutual fund conservative portfolio for preserving the wealth investing across balance advantage and debt funds. ",
-    image: "/assets/gallery_newinvestor.svg",
+    image: "/assets/gallery_preservewealth.svg",
   },
   {
     id: 4,
     title: "New Investor Portfolio",
     desc: "A personalised mutual fund portfolio which can help in starting your investment journey with right combination of funds invested across equity, debt or ETF funds.",
-    image: "/assets/gallery_preservewealth.svg",
+    image: "/assets/gallery_newinvestor.svg",
   },
   {
     id: 5,
@@ -33,13 +33,13 @@ export const portfolios = [
     id: 6,
     title: "Emergency Fund Portfolio",
     desc: "A personalised mutual fund portfolio investing across debt funds which can keep you emergency ready for any extraordinary situation without effecting your long term goals and investments.",
-    image: "/assets/gallery_shortterm.svg",
+    image: "/assets/gallery_emergency.svg",
   },
   {
     id: 7,
     title: "Short Term Portfolio",
     desc: "A personalised mutual fund portfolio investing across debt funds which can keep you emergency ready for any extraordinary situation without effecting your long term goals and investments.",
-    image: "/assets/gallery_emergency.svg",
+    image: "/assets/gallery_shortterm.svg",
   },
 ];
 
